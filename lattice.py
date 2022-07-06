@@ -40,3 +40,22 @@ class Lattice:
     def set_center(self, coordinates: Tuple[int, int]) -> None:
         self.center = coordinates
         self.__update_min_max()
+
+    def get_random_boundary_coordinate(self) -> Tuple[int, int]:
+        boundary = np.random.randint(1, 5)
+
+        if boundary == 1:  # north
+            return self.min_y + 1, np.random.randint(self.min_x + 1,
+                                                     self.max_x - 1)
+
+        elif boundary == 2:  # east
+            return np.random.randint(self.min_y + 1,
+                                     self.max_y - 1), self.max_x - 1
+
+        elif boundary == 3:  # south
+            return self.max_y - 1, np.random.randint(self.min_x + 1,
+                                                     self.max_x - 1)
+
+        elif boundary == 4:  # west
+            return np.random.randint(self.min_y + 1,
+                                     self.max_y - 1), self.min_x + 1
