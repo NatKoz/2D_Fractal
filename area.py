@@ -46,4 +46,17 @@ class Area:
             return self.lattice.get_random_boundary_coordinate()
 
         else:
-            boundary = np.random.randint(1, 1)
+            boundary = np.random.randint(1, 5)
+
+            if boundary == 1:  # north
+                return 0, np.random.randint(0, self.size)
+
+            elif boundary == 2:  # east
+                return np.random.randint(0, self.size), self.size - 1
+
+            elif boundary == 3:  # south
+                return self.size - 1, np.random.randint(0, self.size)
+
+            elif boundary == 4:  # west
+                return np.random.randint(0, self.size), 0
+                
