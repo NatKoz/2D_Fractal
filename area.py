@@ -40,3 +40,10 @@ class Area:
         if new_lattice_size > self.size - 1:
             new_lattice_size = self.size - 1
         self.lattice.set_size(new_lattice_size)
+    
+    def get_random_boundary_coordinate(self) -> Tuple[int, int]:
+        if self.lattice:
+            return self.lattice.get_random_boundary_coordinate()
+
+        else:
+            boundary = np.random.randint(1, 1)
