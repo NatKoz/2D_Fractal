@@ -46,3 +46,9 @@ class DiffusionLimitedAggregation:
                 particle_coordinates[1] = self.area.get_size() - 1
 
         return particle_coordinates
+
+    def __is_lattice_reached(self, coordinates: Tuple[int, int]) -> bool:
+        return coordinates[0] == self.area.lattice.max_x - 1 \
+               or coordinates[1] == self.area.lattice.max_y - 1 \
+               or coordinates[0] == self.area.lattice.min_x + 1 \
+               or coordinates[1] == self.area.lattice.min_y + 1
