@@ -19,3 +19,30 @@ class DiffusionLimitedAggregation:
                               (-1, -1),
                               (-1, 1)
                               ))
+    
+    def __get_random_step(self) -> List[int]:
+        direction = self.__get_random_direction()
+        particle_coordinates = [self.x + direction[0],
+                                self.y + direction[1]]
+
+        if self.area.lattice:
+            if particle_coordinates[0] > self.area.lattice.max_x - 1:
+                particle_coordinates[0] = self.area.lattice.max_x - 1
+            if particle_coordinates[0] < self.area.lattice.min_x + 1:
+                particle_coordinates[0] = self.area.lattice.min_x + 1
+            if particle_coordinates[1] > self.area.lattice.max_y - 1:
+                particle_coordinates[1] = self.area.lattice.max_y - 1
+            if particle_coordinates[1] < self.area.lattice.min_y + 1:
+                particle_coordinates[1] = self.area.lattice.min_y + 1
+
+        else:
+            if particle_coordinates[0] < 0:
+                particle_coordinates[0] = 0
+            if particle_coordinates[1] < 0:
+                particle_coordinates[1] = 0
+            if particle_coordinates[0] > self.area.get_size() - 1:
+                particle_coordinates[0] = self.area.get_size() - 1
+            if particle_coordinates[1] > self.area.get_size() - 1:
+                particle_coordinates[1] = self.area.get_size() - 1
+
+        return particle_coordinates
