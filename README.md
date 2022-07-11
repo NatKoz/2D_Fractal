@@ -55,9 +55,9 @@ ___
 Simulation results of the generated fractal structures
 |||
 | ------ | ----------- |
-| ![1](https://github.com/natkoz/2d_fractal/blob/images/1.png "Fig.1") ==Figure 1.==  |  ![3](https://github.com/natkoz/2d_fractal/blob/images/3.png "Fig.3")  ==Figure 3.== |  
+| ![1](https://github.com/natkoz/2d_fractal/assets/images/1.png "Fig.1") ==Figure 1.==  |  ![3](https://github.com/natkoz/2d_fractal/assets/images/3.png "Fig.3")  ==Figure 3.== |  
 |  |  |
-|![2](https://github.com/natkoz/2d_fractal/blob/images/2.png "Fig.2") ==Figure 2.== |  ![4](https://github.com/natkoz/2d_fractal/blob/images/4.png "Fig.4") ==Figure 4.==  | ------ | ----------- |
+|![2](https://github.com/natkoz/2d_fractal/assets/images/2.png "Fig.2") ==Figure 2.== |  ![4](https://github.com/natkoz/2d_fractal/assets/images/4.png "Fig.4") ==Figure 4.==  | ------ | ----------- |
 
 
 ==Table 1.== Parameters of generated fractal structures images. 
