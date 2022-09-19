@@ -1,5 +1,5 @@
 ---
-## 2D Fractal Structure project
+## Fractal Structure project
 ___
 
 Goal of the project is to generate a fractal structure using Python with some color added.
